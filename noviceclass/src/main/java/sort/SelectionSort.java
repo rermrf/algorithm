@@ -13,9 +13,12 @@ public class SelectionSort {
             int minValueIndex = i;
             for (int j = i+1; j < arr.length; j++) {
                 minValueIndex = arr[j] < arr[minValueIndex] ? j : minValueIndex;
-
             }
+            int temp = arr[i];
+            arr[i] = arr[minValueIndex];
+            arr[minValueIndex] = temp;
         }
+        printArr(arr);
     }
 
     public static void printArr(int[] arr) {
